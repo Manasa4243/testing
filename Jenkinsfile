@@ -8,12 +8,7 @@ pipeline {
     }
 }
 
-        stage('Checkout Code') {
-            steps {
-                git 'https://github.com/Manasa4243/testing.git'
-            }
-        }
-
+       
         stage('Run Selenium Tests') {
             steps {
                 sh 'mvn clean test'
