@@ -18,10 +18,10 @@ public class NewTest {
 
         WebDriver driver = new ChromeDriver(options);
 
-        driver.get("https://example.com");
+        driver.get("https://incognito-2024.pages.dev/#");
 
         String title = driver.getTitle();
-        Assert.assertTrue(title.contains("Example"));
+        Assert.assertTrue(title.contains("INCOGNITO"));
 
         driver.quit();
     }
