@@ -1,0 +1,11 @@
+TestDataID,Name,Email,Password,ConfirmPassword,ScenarioType
+TD_01,ManasaUser,manasa@test.com,Password12345,Password12345,Valid user
+TD_02,RahulTester,rahul@test.com,TestPassword123,TestPassword123,Valid user
+TD_03,DuplicateUser,manasa@test.com,Password12345,Password12345,Duplicate email
+TD_04,InvalidEmailUser,manasatest.com,Password12345,Password12345,Invalid email format
+TD_05,WeakPasswordUser,weak@test.com,pass123,pass123,Weak password
+TD_06,SpecialCharUser,test+user@test.com,Password12345,Password12345,Special character email
+TD_07,UnicodeUser,用户@test.com,Password12345,Password12345,Unicode characters
+TD_08,LeadingSpaceUser, space@test.com,Password12345,Password12345,Leading space input
+TD_09,TrailingSpaceUser,trail@test.com ,Password12345,Password12345,Trailing space input
+TD_10,LongEmailUser,longemailuser1234567890@testdomainexample.com,Password12345,Password12345,Long email
