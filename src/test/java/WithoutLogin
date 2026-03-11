@@ -1,0 +1,20 @@
+import org.openqa.selenium.By;
+
+public class WithoutLogin extends BaseTest {
+
+    public static void main(String[] args) throws InterruptedException {
+
+        setup();
+
+        driver.get(baseUrl + "/login");
+
+        driver.findElement(By.cssSelector("button[type='submit']"))
+                .click();
+
+        Thread.sleep(2000);
+
+        System.out.println("Successful WithoutLogin Test Executed");
+
+        tearDown();
+    }
+}
