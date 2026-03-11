@@ -1,0 +1,43 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SuccessfulRegistration {
+
+    public static void main(String[] args) throws InterruptedException {
+
+        WebDriver driver = new ChromeDriver();
+
+        driver.manage().window().maximize();
+
+        driver.get("https://demowebshop.tricentis.com/register");
+
+        // Select gender
+        driver.findElement(By.id("gender-male")).click();
+
+        // Enter first name
+        driver.findElement(By.id("FirstName")).sendKeys("Manasa");
+
+        // Enter last name
+        driver.findElement(By.id("LastName")).sendKeys("Test");
+
+        // Enter email
+        driver.findElement(By.id("Email"))
+                .sendKeys("manasa" + System.currentTimeMillis() + "@test.com");
+
+        // Enter password
+        driver.findElement(By.id("Password")).sendKeys("Password123");
+
+        // Confirm password
+        driver.findElement(By.id("ConfirmPassword")).sendKeys("Password123");
+
+        // Click register button
+        driver.findElement(By.id("register-button")).click();
+
+        Thread.sleep(3000);
+
+        System.out.println("Successful Registration Completed");
+
+        driver.quit();
+    }
+}
